@@ -12,7 +12,7 @@ import 'package:pub_semver/pub_semver.dart';
 class VersionHelperImpl {
   static void refresh() => js.context.callMethod('hardReload');
 
-  static Future<Version?> getActualVersion() async {
+  static Future<Version> getActualVersion() async {
     try {
       final isLocalhost = html.window.location.host.contains('localhost') ||
           html.window.location.host.contains('127.0.0.1');
@@ -26,7 +26,7 @@ class VersionHelperImpl {
       // TODO: add ability to handle customly errors
       print(
           '[version_checker] error occured:\n${e.toString()}\n\n${stackTrace.toString()}');
-      return null;
+      return Version(0, 0, 0);
     }
   }
 
