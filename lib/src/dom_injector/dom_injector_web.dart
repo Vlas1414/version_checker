@@ -8,7 +8,7 @@ class DOMInjectorImpl {
   static void inject() {
     final head = html.querySelector('head')!;
     final mainDartVer =
-        html.querySelector('body > script') as html.ScriptElement?;
+        html.querySelector('body > script[type="application/javascript"]') as html.ScriptElement?;
     final appVersion = mainDartVer?.src.contains('v=') == true
         ? mainDartVer!.src.split('v=').last
         : null;
