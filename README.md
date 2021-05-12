@@ -1,4 +1,4 @@
-# version_checker
+# version_checker test
 
 ![Build](https://github.com/marchdev-tk/version_checker/workflows/build/badge.svg)
 [![Pub](https://img.shields.io/pub/v/version_checker.svg)](https://pub.dartlang.org/packages/version_checker)
